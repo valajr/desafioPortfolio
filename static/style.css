@@ -39,8 +39,5 @@ a.nav-link:hover {
 }
 
 .skill {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  height: 50px;
 }
