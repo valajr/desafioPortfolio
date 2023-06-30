@@ -84,3 +84,23 @@ footer.border-top {
 textarea.form-control {
   resize: none;
 }
+
+
+.project-card {
+  background-color: #fff;
+}
+
+.card-text {
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-img {
+  width: 200px;
+  height: 100%;
+  min-height: 250px;
+  box-shadow: 0 0 15px #000000 inset;
+  background-size: cover;
+  background-position: center center;
+}
