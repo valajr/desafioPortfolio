@@ -64,11 +64,9 @@ footer.border-top {
 }
 
 .skill-group {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  margin: 0;
   justify-content: center;
-  gap: 10px 30px;
 }
 
 .skill-set {
