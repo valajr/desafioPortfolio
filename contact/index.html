@@ -10,6 +10,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../static/style.css">
+    <script defer src="main.js"></script>
 </head>
 <body class="d-flex h-100 text-center">
     <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column justify-content-between">
@@ -18,8 +19,9 @@
               <li class="nav-item"><a href="/desafioPortfolio/" class="nav-link" aria-current="page">Apresentação</a></li>
               <li class="nav-item"><a href="/desafioPortfolio/formation" class="nav-link">Formação</a></li>
               <li class="nav-item"><a href="/desafioPortfolio/experience" class="nav-link">Atuação Profissional</a></li>
-              <li class="nav-item"><a href="/desafioPortfolio/contact" class="nav-link active">Contato</a></li>
               <li class="nav-item"><a href="/desafioPortfolio/portfolio" class="nav-link">Portfólio</a></li>
+              <li class="nav-item"><a href="/desafioPortfolio/contact" class="nav-link">Contato</a></li>
+              <li class="nav-item"><a href="/desafioPortfolio/message" class="nav-link">Mensagem</a></li>
             </ul>
         </header>
 
@@ -30,13 +32,13 @@
             <a class="text-body-secondary" href="https://www.instagram.com/luisvala/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
             <a class="text-body-secondary" href="https://web.facebook.com/luis.vala.junior/" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
           </p>
-          <form class="mail-form d-flex justify-content-center" method="get" enctype="text/plain">
+          <form class="mail-form d-flex justify-content-center" action="/desafioPortfolio/contact" onsubmit="saveMessage(this)">
             <div class="form-group container-box">
-              <label for="subject">Assunto</label>
-              <input id="subject" class="form-control input-email" type="text" name="subject" placeholder="Vi seu portfólio!"><br>
+              <label for="name">Nome</label>
+              <input id="name" class="form-control input-email" type="text" name="name" placeholder="Seu nome."><br>
               <label for="message">Mensagem</label>
-              <textarea id="message" class="form-control" name="body" rows="5" cols="30" placeholder="Sua mensagem."></textarea><br>
-              <input class="btn btn-primary" type="submit" value="Enviar e-mail">
+              <textarea id="message" class="form-control" name="message" rows="5" cols="30" placeholder="Sua mensagem."></textarea><br>
+              <input class="btn btn-primary" type="submit" value="Enviar mensagem">
             </div>
           </form>
         </main>

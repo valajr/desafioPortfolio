@@ -1,3 +1,4 @@
+/* Adjustments on Bootstrap classes */
 :root {
   --bs-link-color: #2b3137;
 }
@@ -36,8 +37,6 @@ a.nav-link:hover {
   border-bottom-color: var(--bs-link-color);
 }
 
-
-/* Personal aditions */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link  {
   border-radius: 0;
   color: var(--bs-link-color);
@@ -45,6 +44,9 @@ a.nav-link:hover {
   font-weight: bold;
   border-bottom: 2px solid var(--bs-link-color);
 }
+
+
+/* Personal aditions */
 
 body {
   background-color: #e6e8e8;
@@ -63,6 +65,7 @@ footer.border-top {
   color: #2b3137;
 }
 
+/* Experience Page */
 .skill-group {
   width: 100%;
   margin: 0;
@@ -75,15 +78,7 @@ footer.border-top {
   justify-content: center;
 }
 
-.mail-form .form-group {
-  max-width: 500px;
-}
-
-textarea.form-control {
-  resize: none;
-}
-
-
+/* Portfolio Page */
 .project-card {
   background-color: #fff;
 }
@@ -101,4 +96,59 @@ textarea.form-control {
   box-shadow: 0 0 15px #000000 inset;
   background-size: cover;
   background-position: center center;
+}
+
+/* Contact Page */
+.mail-form .form-group {
+  max-width: 500px;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+/* Message Page */
+.message-group {
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  gap: 10px;
+  max-height: 350px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message-group::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+
+.message-group::-webkit-scrollbar-track {
+  background: #c7cdcd;
+}
+
+.message-group::-webkit-scrollbar-thumb {
+  background: var(--bs-secondary-color);
+  border-radius: 10px;
+  opacity: 10%;
+}
+
+.msg {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  word-break: break-all;
+  max-width: 100%;
+  text-align: left;
+}
+
+.msg-name {
+  font-weight: bolder;
+  margin: 0;
+}
+
+.msg-message {
+  margin: 0;
 }
