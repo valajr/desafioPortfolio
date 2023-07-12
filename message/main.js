@@ -24,6 +24,7 @@ function createMessagesHTML() {
     if(localStorage.length) {
         message_group.innerHTML = '';
         message_group.classList.remove('container-box');
+        message_group.classList.add('row');
         let message_data = getMessages(); 
 
         for(let i=0; i<message_data.length; i++) {
