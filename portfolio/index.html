@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../static/style.css">
 </head>
@@ -23,22 +26,41 @@
               <li class="nav-item"><a href="/desafioPortfolio/message" class="nav-link">Mensagem</a></li>
             </ul>
         </header>
-    
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function(){
+              var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+              var popoverList = popoverTriggerList.map(function(element){
+                  return new bootstrap.Popover(element);
+              });
+          });
+          </script>
+
         <div class="row mb-2">
           <div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative project-card">
               <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary-emphasis">
-                  <span class="badge text-bg-warning rounded-pill">JS</span>
-                  <span class="badge text-bg-primary rounded-pill">CSS</span>
-                  <span class="badge text-bg-danger rounded-pill">HTML</span>
+                  <button class="badge text-bg-warning rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="JavaScript" data-bs-placement="bottom" data-bs-content="JavaScript é uma linguagem de programação 
+                  interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.">JS</button>
+                  <button class="badge text-bg-primary rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus"
+                  title="Cascading Style Sheets" data-bs-placement="bottom" data-bs-content="É um mecanismo para adicionar 
+                  estilos a uma página web, aplicado diretamente nas tags HTML ou adicionando um link para um arquivo CSS que 
+                  contém os estilos.">CSS</button>
+                  <button class="badge text-bg-danger rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="HyperText Markup Language" data-bs-placement="bottom" data-bs-content="É uma linguagem de marcação 
+                  utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.">HTML</button>
                 </strong>
                 <h3 class="mb-0">Deca-match</h3>
                 <p class="card-text mb-auto">Um jogo match-3 com batalha em turnos.</p>
                 <div class="btn-group">
-                  <a href="https://valajr.github.io/deca-match" target="_blank" class="btn btn-link" title="Projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="https://github.com/valajr/deca-match" target="_blank" class="btn btn-link" title="Repositório"><i class="fas fa-code-branch"></i></a>
-                  <a href="https://trello.com/b/euOHh2Xw/09-project-match-3" target="_blank" class="btn btn-link" title="Trello"><i class="fab fa-trello"></i></a>
+                  <a href="https://valajr.github.io/deca-match" target="_blank" class="btn btn-link" 
+                  title="Projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/valajr/deca-match" target="_blank" class="btn btn-link" 
+                  title="Repositório"><i class="fas fa-code-branch"></i></a>
+                  <a href="https://trello.com/b/euOHh2Xw/09-project-match-3" target="_blank" class="btn btn-link" 
+                  title="Trello"><i class="fab fa-trello"></i></a>
                 </div>
               </div>
               <div class="col-auto d-none d-lg-block project-img" style="background-image: url(https://i.imgur.com/XENTBqg.png);">
@@ -49,17 +71,28 @@
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative project-card">
               <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary-emphasis">
-                  <span class="badge text-bg-warning rounded-pill">JS</span>
-                  <span class="badge text-bg-primary rounded-pill">CSS</span>
-                  <span class="badge text-bg-danger rounded-pill">HTML</span>
-                  <span class="badge badge-light"><a href="https://github.com/valajr/BlueDog" target="_blank" style="color: black;">+lib</a></span>
+                  <button class="badge text-bg-warning rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="JavaScript" data-bs-placement="bottom" data-bs-content="JavaScript é uma linguagem de programação 
+                  interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.">JS</button>
+                  <button class="badge text-bg-primary rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="Cascading Style Sheets" data-bs-placement="bottom" data-bs-content="É um mecanismo para adicionar 
+                  estilos a uma página web, aplicado diretamente nas tags HTML ou adicionando um link para um arquivo CSS que 
+                  contém os estilos.">CSS</button>
+                  <button class="badge text-bg-danger rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="HyperText Markup Language" data-bs-placement="bottom" data-bs-content="É uma linguagem de marcação 
+                  utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.">HTML</button>
+                  <span class="badge badge-light"><a href="https://github.com/valajr/BlueDog" target="_blank" 
+                    style="color: black;">+lib</a></span>
                 </strong>
                 <h3 class="mb-0">Anime Theater</h3>
                 <p class="card-text mb-auto">Simulação de um site de cinema com animes.</p>
                 <div class="btn-group">
-                  <a href="https://valajr.github.io/Anime-Theater/" target="_blank" class="btn btn-link" title="Projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="https://github.com/valajr/Anime-Theater" target="_blank" class="btn btn-link" title="Repositório"><i class="fas fa-code-branch"></i></a>
-                  <a href="https://trello.com/b/PbWSl7hg/07-project-anime-theater" target="_blank" class="btn btn-link" title="Trello"><i class="fab fa-trello"></i></a>
+                  <a href="https://valajr.github.io/Anime-Theater/" target="_blank" class="btn btn-link" 
+                  title="Projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/valajr/Anime-Theater" target="_blank" class="btn btn-link" 
+                  title="Repositório"><i class="fas fa-code-branch"></i></a>
+                  <a href="https://trello.com/b/PbWSl7hg/07-project-anime-theater" target="_blank" class="btn btn-link" 
+                  title="Trello"><i class="fab fa-trello"></i></a>
                 </div>
               </div>
               <div class="col-auto d-none d-lg-block project-img" style="background-image: url(https://i.imgur.com/5ZzT7yd.png);">
@@ -70,17 +103,28 @@
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative project-card">
               <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary-emphasis">
-                  <span class="badge text-bg-warning rounded-pill">JS</span>
-                  <span class="badge text-bg-primary rounded-pill">CSS</span>
-                  <span class="badge text-bg-danger rounded-pill">HTML</span>
-                  <span class="badge text-bg-light"><a href="https://github.com/valajr/Downfall-Libs" target="_blank" style="color: black;">+lib</a></span>
+                  <button class="badge text-bg-warning rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="JavaScript" data-bs-placement="bottom" data-bs-content="JavaScript é uma linguagem de programação 
+                  interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.">JS</button>
+                  <button class="badge text-bg-primary rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="Cascading Style Sheets" data-bs-placement="bottom" data-bs-content="É um mecanismo para adicionar 
+                  estilos a uma página web, aplicado diretamente nas tags HTML ou adicionando um link para um arquivo CSS que 
+                  contém os estilos.">CSS</button>
+                  <button class="badge text-bg-danger rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="HyperText Markup Language" data-bs-placement="bottom" data-bs-content="É uma linguagem de marcação 
+                  utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.">HTML</button>
+                  <span class="badge text-bg-light"><a href="https://github.com/valajr/Downfall-Libs" target="_blank" 
+                    style="color: black;">+lib</a></span>
                 </strong>
                 <h3 class="mb-0">Downfall Game</h3>
                 <p class="card-text mb-auto">Um jogo de cartas usando uma biblioteca de um projeto anterior.</p>
                 <div class="btn-group">
-                  <a href="https://valajr.github.io/Downfall-Game/" target="_blank" class="btn btn-link" title="Projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="https://github.com/valajr/Downfall-Game" target="_blank" class="btn btn-link" title="Repositório"><i class="fas fa-code-branch"></i></a>
-                  <a href="https://trello.com/b/IgHx3Czw/05-projeto-downfall-game" target="_blank" class="btn btn-link" title="Trello"><i class="fab fa-trello"></i></a>
+                  <a href="https://valajr.github.io/Downfall-Game/" target="_blank" class="btn btn-link" 
+                  title="Projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/valajr/Downfall-Game" target="_blank" class="btn btn-link" 
+                  title="Repositório"><i class="fas fa-code-branch"></i></a>
+                  <a href="https://trello.com/b/IgHx3Czw/05-projeto-downfall-game" target="_blank" class="btn btn-link" 
+                  title="Trello"><i class="fab fa-trello"></i></a>
                 </div>
               </div>
               <div class="col-auto d-none d-lg-block project-img" style="background-image: url(https://i.imgur.com/wRhbKOE.png);">
@@ -91,16 +135,26 @@
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative project-card">
               <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary-emphasis">
-                  <span class="badge text-bg-warning rounded-pill">JS</span>
-                  <span class="badge text-bg-primary rounded-pill">CSS</span>
-                  <span class="badge text-bg-danger rounded-pill">HTML</span>
+                  <button class="badge text-bg-warning rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="JavaScript" data-bs-placement="bottom" data-bs-content="JavaScript é uma linguagem de programação 
+                  interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.">JS</button>
+                  <button class="badge text-bg-primary rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="Cascading Style Sheets" data-bs-placement="bottom" data-bs-content="É um mecanismo para adicionar 
+                  estilos a uma página web, aplicado diretamente nas tags HTML ou adicionando um link para um arquivo CSS que 
+                  contém os estilos.">CSS</button>
+                  <button class="badge text-bg-danger rounded-pill" data-bs-toggle="popover" data-bs-trigger="focus" 
+                  title="HyperText Markup Language" data-bs-placement="bottom" data-bs-content="É uma linguagem de marcação 
+                  utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.">HTML</button>
                 </strong>
                 <h3 class="mb-0">Chess</h3>
                 <p class="card-text mb-auto">Xadrez com alguns elementos de RPG.</p>
                 <div class="btn-group">
-                  <a href="https://valajr.github.io/chess/" target="_blank" class="btn btn-link" title="Projeto"><i class="fas fa-external-link-alt"></i></a>
-                  <a href="https://github.com/valajr/chess" target="_blank" class="btn btn-link" title="Repositório"><i class="fas fa-code-branch"></i></a>
-                  <a href="https://trello.com/b/ht7BQyD1" target="_blank" class="btn btn-link" title="Trello"><i class="fab fa-trello"></i></a>
+                  <a href="https://valajr.github.io/chess/" target="_blank" class="btn btn-link" 
+                  title="Projeto"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/valajr/chess" target="_blank" class="btn btn-link" 
+                  title="Repositório"><i class="fas fa-code-branch"></i></a>
+                  <a href="https://trello.com/b/ht7BQyD1" target="_blank" class="btn btn-link" 
+                  title="Trello"><i class="fab fa-trello"></i></a>
                 </div>
               </div>
               <div class="col-auto d-none d-lg-block project-img" style="background-image: url(https://i.imgur.com/y917pNd.png);">
@@ -116,10 +170,14 @@
           </div>
       
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="https://github.com/valajr" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/valajr/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/luisvala/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https://web.facebook.com/luis.vala.junior/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://github.com/valajr" 
+              target="_blank"><i class="fab fa-github"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/valajr/" 
+              target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/luisvala/" 
+              target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://web.facebook.com/luis.vala.junior/" 
+              target="_blank"><i class="fab fa-facebook-f"></i></a></li>
           </ul>
         </footer>
       </div>

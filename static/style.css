@@ -45,6 +45,9 @@ a.nav-link:hover {
   border-bottom: 2px solid var(--bs-link-color);
 }
 
+.badge {
+  border: none;
+}
 
 /* Personal aditions */
 
